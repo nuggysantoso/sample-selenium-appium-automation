@@ -27,7 +27,7 @@ public class BaseWebTest extends DriverBuilder {
         super.setDriver();
         homePage = new HomePage(getWebDriver());
         System.out.println("=========================================================");
-        System.out.println("Project      : Tokopedia Web Automation");
+        System.out.println("Project      : Helpster Web Automation");
         System.out.println("Date         : "+ dateFormat.format(date));
         System.out.println("URL          : "+ Constants.DEFAULT_WEB_URL);
         System.out.println("Driver Name  : "+ Constants.DEFAULT_WEBDRIVER_NAME);

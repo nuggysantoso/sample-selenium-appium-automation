@@ -17,7 +17,7 @@ public abstract class AbstractPage {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
     }
-    public abstract void checkTitlePage();
+    protected abstract void checkTitlePage();
 
     protected void assertTrue(String message, boolean condition){
         Assert.assertTrue(message, condition);

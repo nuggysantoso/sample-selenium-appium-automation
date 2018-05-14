@@ -66,13 +66,13 @@ public class DriverBuilder {
         File appDir = new File(Constants.DEFAULT_APP_PATH);
         File app = new File(appDir, Constants.DEFAULT_ANDROID_APP_NAME);
         capabilities = new DesiredCapabilities();
-//        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Constants.DEFAULT_ANDROID_PLATFORM_VERSION);
-//        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Constants.DEFAULT_ANDROID_DEVICE_NAME);
-//        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-//        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 520000);
-//        capabilities.setCapability("unicodeKeyboard", "true");
-//        capabilities.setCapability("appPackage", "com.photon.mobile.sampleapps");
-//        capabilities.setCapability("appActivity", "com.photon.mobile.sampleapps.activity.SplashScreenActivity");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, Constants.DEFAULT_ANDROID_PLATFORM_VERSION);
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Constants.DEFAULT_ANDROID_DEVICE_NAME);
+        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 520000);
+        capabilities.setCapability("unicodeKeyboard", "true");
+        capabilities.setCapability("appPackage", "com.helpster.partner");
+        capabilities.setCapability("appActivity", "com.helpster.main.MainSplashersActivity");
         return new AndroidDriver(new URL(Constants.DEFAULT_WD_URL), capabilities);
     }
 

@@ -13,5 +13,6 @@ public class HomePageTest extends BaseWebTest {
     public void HM_01() {
 //        steps("Verify step to change section bar");
         homePage.checkTitlePage();
+        homePage.checkKamu();
     }
 }

@@ -13,8 +13,9 @@ public class Constants {
     /**
      * Default Constant value for ios
      */
-    public static final String DEFAULT_ANDROID_APP_NAME = null;
-
+    public static final String DEFAULT_ANDROID_APP_NAME = "Helpster.apk";
+    public static final String DEFAULT_ANDROID_PLATFORM_VERSION = "5.1.1";
+    public static final String DEFAULT_ANDROID_DEVICE_NAME = "AndroidL";
     /**
      * Default Constant value for android
      */

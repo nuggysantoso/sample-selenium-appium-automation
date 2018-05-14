@@ -15,7 +15,6 @@ public class HomePage extends AbstractPage {
 
     @Override
     public void checkTitlePage() {
-//        assertElementIsDisplayed(getElementByClassName(titlePage));
-        assertTextElementIsEquals(getElementByCssSelector(titlePage), "Tokopia");
+        assertTextElementIsEquals(getElementByCssSelector(titlePage), "Tokopedia");
     }
 }
