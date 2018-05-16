@@ -4,7 +4,6 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -43,6 +42,7 @@ public class DriverBuilder {
 
     public static void setDriver() throws Exception {
         if (getPlatform().equalsIgnoreCase("Web")){
+            System.out.println(getPlatform());
             setWebDriver();
         }
         else {
@@ -70,9 +70,13 @@ public class DriverBuilder {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Constants.DEFAULT_ANDROID_DEVICE_NAME);
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 520000);
-        capabilities.setCapability("unicodeKeyboard", "true");
-        capabilities.setCapability("appPackage", "com.helpster.partner");
-        capabilities.setCapability("appActivity", "com.helpster.main.MainSplashersActivity");
+        capabilities.setCapability("--session-override",true);
+        capabilities.setCapability("platformName", getNativePlatform());
+        capabilities.setCapability("appWaitDuration", Constants.DEFAULT_ANDROID_APP_WAIT);
+        capabilities.setCapability("appPackage", Constants.DEFAULT_ANDROID_APP_PACKAGE);
+        capabilities.setCapability("appWaitActivity", Constants.DEFAULT_ANDROID_WAIT_ACTIVITY);
+        capabilities.setCapability("unicodeKeyboard", true);
+        capabilities.setCapability("fullReset", true);
         return new AndroidDriver(new URL(Constants.DEFAULT_WD_URL), capabilities);
     }
 

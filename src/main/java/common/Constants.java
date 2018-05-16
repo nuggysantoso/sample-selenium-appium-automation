@@ -11,13 +11,16 @@ public class Constants {
     public static final String DEFAULT_APP_PATH = System.getProperty("user.home") + "/Documents/";
 
     /**
-     * Default Constant value for ios
+     * Default Constant value for Android
      */
     public static final String DEFAULT_ANDROID_APP_NAME = "Helpster.apk";
     public static final String DEFAULT_ANDROID_PLATFORM_VERSION = "5.1.1";
     public static final String DEFAULT_ANDROID_DEVICE_NAME = "AndroidL";
+    public static final int DEFAULT_ANDROID_APP_WAIT = 30000;
+    public static final String DEFAULT_ANDROID_APP_PACKAGE = "com.helpster.partner.develop";
+    public static final String DEFAULT_ANDROID_WAIT_ACTIVITY = "com.helpster.main.MainHelpsterActivity";
     /**
-     * Default Constant value for android
+     * Default Constant value for iOS
      */
     public static final String DEFAULT_IOS_APP_NAME = null;
 

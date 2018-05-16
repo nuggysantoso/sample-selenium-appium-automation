@@ -1,7 +1,7 @@
 package platform.web;
 
-import org.junit.Test;
 import common.BaseWebTest;
+import org.junit.Test;
 
 /**
  * Created by nugroho_s on 1/26/18.
@@ -13,6 +13,5 @@ public class HomePageTest extends BaseWebTest {
     public void HM_01() {
 //        steps("Verify step to change section bar");
         homePage.checkTitlePage();
-        homePage.checkKamu();
     }
 }
